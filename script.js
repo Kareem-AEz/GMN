@@ -42,11 +42,10 @@ let updateMessage = (text, color = '#fefae0') => {
 let generatedNumber = generateRandom();
 let n = 0;
 
-checkButton.addEventListener('click', () => {
+let eventHandler = () => {
   //keeps checking guessed number
   let guessedNumber = Number(guessedNumberInput.value);
 
-  /* 
   // ensures that the input is number but no need as the type of input is number
   if (isNaN(guessedNumber)) {
     updateMessage('please enter a number');
@@ -54,7 +53,7 @@ checkButton.addEventListener('click', () => {
     resetErrAnimation(message);
     return;
   }
-    */
+
   if (guessedNumber <= 0 || guessedNumber > 20) {
     updateMessage('please a number between 1~20');
     message.classList.add('err');
@@ -98,7 +97,9 @@ checkButton.addEventListener('click', () => {
       n++;
     }
   }
-});
+};
+
+checkButton.addEventListener('click', eventHandler);
 
 againButton.addEventListener('click', () => {
   generatedNumber = generateRandom();
@@ -106,4 +107,10 @@ againButton.addEventListener('click', () => {
   scoreValue.textContent = '20';
   updateMessage('start Guessing...');
   n = 0;
+});
+
+guessedNumberInput.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    eventHandler();
+  }
 });
