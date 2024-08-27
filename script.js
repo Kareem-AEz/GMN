@@ -75,7 +75,7 @@ let eventHandler = () => {
       updateMessage(`you're a bit low!`);
     }
 
-    if (guessedNumber !== generatedNumber) {
+    if (guessedNumber !== generatedNumber && !n) {
       message.classList.add('err');
       resetErrAnimation(message);
 
