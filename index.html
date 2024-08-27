@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Guss My Name" />
+    <meta name="theme-color" content="#67b8de" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kareem-aez.github.io/Sportify/" />
+    <meta property="og:title" content="Guess My Number" />
+    <meta
+      property="og:description"
+      content="Guess My Number: A fun and interactive number guessing game! Try to guess the randomly generated number between 1 and 20. Play, challenge yourself, and see how many tries it takes to win!"
+    />
+    <meta
+      property="og:image"
+      content="https://kareem-aez.github.io/GMN/aesthetics/OG.png"
+    />
+    <meta property="og:image" content="aesthetics/OG.png" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Guess My Number" />
+    <meta
+      name="twitter:description"
+      content="Guess My Number: A fun and interactive number guessing game! Try to guess the randomly generated number between 1 and 20. Play, challenge yourself, and see how many tries it takes to win!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://kareem-aez.github.io/GMN/aesthetics/twitter.png"
+    />
+    <meta name="twitter:image" content="aesthetics/twitter.png" />
+
+    <!--  icon -->
+    <link rel="shortcut icon" href="aesthetics/logo.svg" type="image/x-icon" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Guess My Number</title>
+    <meta
+      name="description"
+      content="Guess My Number: A fun and interactive number guessing game! Try to guess the randomly generated number between 1 and 20. Play, challenge yourself, and see how many tries it takes to win!"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <button class="flat-shadow btn--round btn-again again">
+        <svg>
+          <use xlink:href="sprite.svg#again"></use>
+        </svg>
+      </button>
+      <h1>Guess My Number...</h1>
+      <p class="info">Between 1 and 20</p>
+      <div class="screen">?</div>
+      <p class="message">start guessing...</p>
+    </header>
+
+    <main>
+      <section class="left">
+        <input class="guess" type="number" placeholder="1~20" />
+        <button class="flat-shadow btn--default check">Check</button>
+      </section>
+
+      <section class="right">
+        <div class="item">
+          <svg class="svg">
+            <use xlink:href="sprite.svg#score"></use>
+          </svg>
+          <p class="score__text">Score: <span class="score__value">20</span></p>
+        </div>
+
+        <div class="item">
+          <svg class="svg">
+            <use xlink:href="sprite.svg#high_score"></use>
+          </svg>
+          <p class="score__text">
+            Highscore: <span class="high-score__value">0</span>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        The flat shadow effect was inspired by
+        <a target="_blank" href="https://hot.page/">Hot Page</a>.
+      </p>
+      <p>Check the console for shadow values.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="flatshado_generator.js"></script>
+  </body>
+</html>

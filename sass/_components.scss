@@ -1,0 +1,88 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: teal;
+  margin: 100px auto;
+
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.flat-shadow {
+  box-shadow: 0.7px 0.7px 0 #023047, 1.4px 1.4px 0 #023047,
+    2.1px 2.1px 0 #023047, 2.8px 2.8px 0 #023047, 3.5px 3.5px 0 #023047,
+    4.2px 4.2px 0 #023047, 4.9px 4.9px 0 #023047, 5.6px 5.6px 0 #023047,
+    6.3px 6.3px 0 #023047, 7px 7px 0 #023047, 0.7px 0.7px 0 4px #fefae0,
+    1.4px 1.4px 0 4px #fefae0, 2.1px 2.1px 0 4px #fefae0,
+    2.8px 2.8px 0 4px #fefae0, 3.5px 3.5px 0 4px #fefae0,
+    4.2px 4.2px 0 4px #fefae0, 4.9px 4.9px 0 4px #fefae0,
+    5.6px 5.6px 0 4px #fefae0, 6.3px 6.3px 0 4px #fefae0, 7px 7px 0 4px #fefae0;
+  transition: box-shadow, transform;
+  transition-duration: 0.2681s;
+
+  transition-timing-function: cubic-bezier(0.51, 1.95, 0.5, 0.6);
+}
+
+.flat-shadow:hover {
+  box-shadow: 1px 1px 0 #023047, 2px 2px 0 #023047, 3px 3px 0 #023047,
+    4px 4px 0 #023047, 5px 5px 0 #023047, 6px 6px 0 #023047, 7px 7px 0 #023047,
+    8px 8px 0 #023047, 9px 9px 0 #023047, 10px 10px 0 #023047,
+    1px 1px 0 4px #fefae0, 2px 2px 0 4px #fefae0, 3px 3px 0 4px #fefae0,
+    4px 4px 0 4px #fefae0, 5px 5px 0 4px #fefae0, 6px 6px 0 4px #fefae0,
+    7px 7px 0 4px #fefae0, 8px 8px 0 4px #fefae0, 9px 9px 0 4px #fefae0,
+    10px 10px 0 4px #fefae0;
+  transform: translate(-1.6px, -1.6px);
+}
+
+.flat-shadow:active {
+  box-shadow: 0.4px 0.4px 0 #023047, 0.8px 0.8px 0 #023047,
+    1.2px 1.2px 0 #023047, 1.6px 1.6px 0 #023047, 2px 2px 0 #023047,
+    2.4px 2.4px 0 #023047, 2.8px 2.8px 0 #023047, 3.2px 3.2px 0 #023047,
+    3.6px 3.6px 0 #023047, 4px 4px 0 #023047, 0.4px 0.4px 0 4px #fefae0,
+    0.8px 0.8px 0 4px #fefae0, 1.2px 1.2px 0 4px #fefae0,
+    1.6px 1.6px 0 4px #fefae0, 2px 2px 0 4px #fefae0, 2.4px 2.4px 0 4px #fefae0,
+    2.8px 2.8px 0 4px #fefae0, 3.2px 3.2px 0 4px #fefae0,
+    3.6px 3.6px 0 4px #fefae0, 4px 4px 0 4px #fefae0;
+  transform: translate(0, 0);
+
+  transition: 0.168s cubic-bezier(0.2, 0, 0.4, 1);
+}
+
+%btn {
+  background-color: $color-main;
+  color: $color-white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  &--round {
+    @extend %btn;
+    border-radius: 100px;
+    padding: 1rem;
+  }
+
+  &--default {
+    @extend %btn;
+    border-radius: 3px;
+    padding: 0.8rem 2rem;
+
+    font-size: 3.8rem;
+  }
+}
+
+.btn-again {
+  svg {
+    height: 4.6rem;
+    width: 4.6rem;
+
+    transition: transform 0.286s cubic-bezier(0.2, 0, 0.4, 1);
+  }
+
+  &:hover svg {
+    transform: rotate(-15deg);
+  }
+  &:active svg {
+    transform: rotate(190deg);
+  }
+}
