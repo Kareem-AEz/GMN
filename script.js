@@ -44,6 +44,11 @@ let shakeErr = (msg = 'no message', element = message) => {
   resetErrAnimation(element);
 };
 
+let focusNHighlight = () => {
+  guessedNumberInput.focus();
+  guessedNumberInput.select();
+};
+
 /*          ----------- main -----------          */
 let generatedNumber = generateRandom();
 let score = 20;
@@ -53,6 +58,8 @@ let gameOver = false;
 let eventHandler = () => {
   //keeps checking guessed number
   let guessedNumber = Number(guessedNumberInput.value);
+
+  focusNHighlight();
 
   // ensures that the input is number but no need as the type of input is number although the input type is set to number
   if (isNaN(guessedNumber)) {
@@ -112,3 +119,5 @@ guessedNumberInput.addEventListener('keypress', function (e) {
     eventHandler();
   }
 });
+
+document.getElementsByClassName;

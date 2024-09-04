@@ -187,6 +187,21 @@ footer {
   footer a {
     color: #023047; }
 
+::selection {
+  background-color: #fefae0;
+  color: #dc811a; }
+
+input:focus {
+  outline: #fefae0 solid 4px;
+  outline-offset: 0.6rem;
+  animation: focus 0.168s cubic-bezier(0.2, 0, 0.4, 1); }
+
+@keyframes focus {
+  from {
+    outline-offset: 0; }
+  to {
+    outline-offset: 0.6rem; } }
+
 .box {
   width: 100px;
   height: 100px;
@@ -218,11 +233,14 @@ footer {
 
 .btn--round {
   border-radius: 100px;
-  padding: 1rem; }
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .btn--default {
-  border-radius: 3px;
-  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  padding: 0.6rem 3.2rem;
   font-size: 3.8rem; }
 
 .btn-again svg {

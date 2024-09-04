@@ -60,12 +60,16 @@
     @extend %btn;
     border-radius: 100px;
     padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &--default {
     @extend %btn;
-    border-radius: 3px;
-    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    padding: 0.6rem 3.2rem;
 
     font-size: 3.8rem;
   }

@@ -170,3 +170,23 @@ footer {
     color: $color-dark;
   }
 }
+
+::selection {
+  background-color: $color-white;
+  color: $color-main;
+}
+
+input:focus {
+  outline: $color-white solid 4px;
+  outline-offset: 0.6rem;
+  animation: focus 0.168s cubic-bezier(0.2, 0, 0.4, 1);
+}
+
+@keyframes focus {
+  from {
+    outline-offset: 0;
+  }
+  to {
+    outline-offset: 0.6rem;
+  }
+}
